@@ -1,0 +1,9 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {% for eachmodel in wholemodel %}
+        <p>
+            <a href="{% url 'blog:detail' eachmodel.pk %}">{{eachmodel}}</a>
+        </p>
+    {% endfor %}
+{% endblock %}
